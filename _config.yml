@@ -14,15 +14,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: IT engineering in practice
-#email: your-email@example.com
+email: me.endlessdawn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This simple blog describes daily routine in IT engineering, including tasks and cases from the learning purposes. 
   The author disclaims any liability in connection with the use of this information and assumes no responsibility 
   for any damage that may be caused thourgh the use. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:  me_endlessdawn
-github_username:   endlessdawn
+twitter_username: me_endlessdawn
+github_username: endlessdawn
 
 # Build settings
 markdown: kramdown

@@ -1,0 +1,2 @@
+I have been deciding to write articles for a long time, but only now i found that I can do that.
+My name is endlessDawn and I'm working in IT industry for quite a long time .  My job is pretty cool , but sometimes i have really tough time in learning of software products. It's even more harder to learn, because sometimes it contains mutliple components, where you have to be an expert and time works against you. No more complaints anymore, so let's start a long journey through the learning process.

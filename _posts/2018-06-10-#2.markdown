@@ -6,4 +6,4 @@ categories: jekyll update
 ---
 Almost 1 month and half and i haven't given up learning coding . Holy fuck!  I had started so slowly learning Python  from CodeAcademy in 2015, had read few books without good understanding,tried to solve  problems in hackerrank, but only after 3 years i have done a little progress on it. 
 
-I write a small code, which scrap some data from AppStore for me about latest app's updates. But, seems i have to modify it: add output to xsl and send  a notifications.
+I write a small code, which scrap some data from AppStore for me about latest app's updates. But, seems i have to modify it: add output to .csv and send a notifications.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "#2"
-date:   2018-10-06 10:50:00 +0100
+date:   2018-06-10 10:50:00 +0100
 categories: jekyll update
 ---
 Almost 1 month and half and i haven't given up learning coding . Holy fuck!  I had started so slowly learning Python  from CodeAcademy in 2015, had read few books without good understanding,tried to solve  problems in hackerrank, but only after 3 years i have done a little progress on it. 

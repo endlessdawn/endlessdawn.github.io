@@ -1,0 +1,48 @@
+
+---
+layout: post
+title:  "#3"
+date:   2018-06-19 10:22:00 +0100
+categories: jekyll update
+---
+
+Lovely string :
+```
+cs = r'DRIVER={ODBC Driver 13 for SQL Server};SERVER=server;DATABASE=db;PORT=any_port;Trusted connectoin=yes;'
+pyodbc.connect(cs)
+```
+
+It took several tough hours from my side to get how pyodbc.connect() method works with remote MS SQL server.
+First few attempts to connect remotely on the server looked like:
+
+```
+cs = r'DRIVER={ODBC Driver 13 for SQL Server};SERVER=server;DATABASE=db;PORT=any_port;UID=Domain\username;PWD=password;'
+pyodbc.connect(cs)
+```
+```
+cs = r'DRIVER={ODBC Driver 13 for SQL Server};SERVER=server;DATABASE=db;PORT=any_port;UID=Domain\username;PWD=password;Trusted connectoin=yes;'
+pyodbc.connect(cs)
+```
+
+or :
+
+```
+cs = pyodbc.connect(
+	                 r'DRIVER={SQL Native Client};'
+                     r'SERVER=server;'
+                     r'DATABASE=db;'
+                     r'PORT=port;' 
+                     r'UID=domain\username;'
+                     r'PWD=password;')
+
+```
+
+
+But IDLE's output everytime was the same: '..very  long message..Login failed for user 'domain\\username'. It might be that UID key didn't work properly with backslash or i did a mistake in parameteres for connect() method or may be there was a specific way how to connect to SQL server? Long searching in stackoverflow didn't give me any ideas how to figure it out. 
+But, wait, what about pyodbc docs ? 
+'Connections to databases are made through the use of connection strings in the pyodbc.connect() function, but the most important thing to remember is that pyodbc does not even look at the connection string. It is passed directly to the database driver unmodified (through SQLDriverConnect)'
+[https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-databases]
+
+ And when i played around with key parameters : UID,PWD and Trusted_connection. My mistake was to use all these keys together. Because it's really easy to think that if you set up a UID and PWD with Windows credentials and then use Trusted_connection parameter,all these components will pass the Windows auhtnetication on the SQL server.But it didn't work like that.
+
+ In one of the MSDN articles [https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard?view=sql-server-2017] i found that for SQL authentication requires these two parameteres : UID and PWD, and Windows authentication requires only pair of keys : 'Trusted_connection=true'. Problem was solved. 

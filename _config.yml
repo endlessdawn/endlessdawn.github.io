@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: py it right
-email: me.endlessdawn@gmail.com
+#email: me.endlessdawn@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This simple blog describes daily life in IT engineering, learning cases and learning itself.
   The author disclaims any liability in connection with the use of this information and assumes no responsibility 
@@ -22,7 +22,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: me_endlessdawn
-github_username: endlessdawn
+#github_username: endlessdawn
 
 # Build settings
 markdown: kramdown
